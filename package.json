@@ -1,0 +1,22 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrcharles/udemy-learn-node-weather-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrcharles/udemy-learn-node-weather-app/issues"
+  },
+  "homepage": "https://github.com/jrcharles/udemy-learn-node-weather-app#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
