@@ -1,20 +1,13 @@
 const request = require('request')
 const geocode = require('./utils/geocode.js')
+const forecast = require('./utils/forecast.js')
 
-// request({
-//     url: 'http://api.weatherstack.com/current?access_key=805308cf562392412b4ed958fc5acd87&query=Knoxville,%20TN&units=f',
-//     json: true
-// }, (err, res) => {
-//     if (err) {
-//         console.log('Unable to connect to weather service')
-//     } else if (res.body.error) {
-//         console.log('Unable to find location')
-//     } else {
-//     const data = res.body.current
-//     console.log(data.weather_descriptions[0] + '. It is currently ' + data.temperature + ' degrees.  It feels like ' + data.feelslike + ' out.')
-//     }
-// }}
-
-geocode('Knoxville, TN', (err, res) => {
+geocode('Las Vegas, NV', (err, res) => {
+    console.log('Error', err)
     console.log('Data', res)
 })
+
+forecast(115.1492, 36.1663, (error, data) => {
+    console.log('Error', error)
+    console.log('Data', data)
+  })
