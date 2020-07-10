@@ -1,7 +1,7 @@
 const request = require("request")
 
 const forecast = (longitude, latitude, callback) => {
-  const api = "805308cf562392412b4ed958fc5acd87";
+  const api = "805308cf562392412b4ed958fc5acd87"
   const url =
     "http://api.weatherstack.com/current?access_key=" +
     api +
@@ -18,9 +18,9 @@ const forecast = (longitude, latitude, callback) => {
     },
     (err, { body }) => {
       if (err) {
-        callback("Unable to connect to forecast service", undefined);
+        callback("Unable to connect to forecast service", undefined)
       } else if (body.error) {
-        callback("Unable to find location", undefined);
+        callback("Unable to find location", undefined)
       } else {
         callback(
           undefined,
