@@ -1,4 +1,4 @@
-const request = require("request");
+const request = require("request")
 
 const geocode = (address, callback) => {
   const api =
@@ -8,7 +8,7 @@ const geocode = (address, callback) => {
     encodeURIComponent(address) +
     ".json?access_token=" +
     api +
-    "&limit=1";
+    "&limit=1"
 
   request(
     {
@@ -17,21 +17,21 @@ const geocode = (address, callback) => {
     },
     (err, { body }) => {
       if (err) {
-        callback("Unable to connect to geocoding service", undefined);
+        callback("Unable to connect to geocoding service", undefined)
       } else if (body.features.length === 0) {
         callback(
           "Unable to find location.  Try changing your search terms",
           undefined
-        );
+        )
       } else {
         callback(undefined, {
           long: body.features[0].center[1],
           lat: body.features[0].center[0],
           location: body.features[0].place_name,
-        });
+        })
       }
     }
-  );
-};
+  )
+}
 
-module.exports = geocode;
+module.exports = geocode
